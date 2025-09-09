@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Idle RPG Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-900 via-gray-900 to-blue-900 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center space-x-3 cursor-pointer" id="logo">
+        <svg class="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7l3-7z"/></svg>
+        <span class="text-2xl font-bold text-yellow-400 select-none">Idle RPG</span>
+      </div>
+      <nav>
+        <ul class="flex space-x-6 text-lg">
+          <li><a href="#" data-page="home" class="nav-link hover:text-yellow-400 transition">Home</a></li>
+          <li><a href="#" data-page="guide" class="nav-link hover:text-yellow-400 transition">Guide</a></li>
+          <li><a href="#" data-page="heroes" class="nav-link hover:text-yellow-400 transition">Heroes</a></li>
+          <li><a href="#" data-page="items" class="nav-link hover:text-yellow-400 transition">Items</a></li>
+          <li><a href="#" data-page="tips" class="nav-link hover:text-yellow-400 transition">Tips</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto p-4">
+
+    <!-- Home Page -->
+    <section id="page-home" class="page fade-in">
+      <div class="relative rounded-lg overflow-hidden shadow-lg bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80" alt="Fantasy RPG Background" class="absolute inset-0 w-full h-full object-cover opacity-30" />
+        <div class="relative z-10 flex flex-col items-center justify-center text-center py-32 px-4">
+          <h1 class="text-5xl md:text-6xl font-extrabold text-yellow-400 drop-shadow-lg mb-6">Idle RPG Guide</h1>
+          <button id="btn-start-reading" class="bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-yellow-500 transition">Mulai Membaca</button>
+        </div>
+      </div>
+
+      <div class="mt-12 max-w-3xl mx-auto text-center text-gray-300 text-lg leading-relaxed">
+        <p>
+          Idle RPG adalah game petualangan fantasi di mana kamu mengumpulkan hero, bertarung melawan monster, dan mengembangkan karakter secara otomatis. Panduan ini akan membantu kamu memahami mekanisme dasar, strategi farming, dan cara membangun tim terbaik.
+        </p>
+      </div>
+    </section>
+
+    <!-- Guide Page -->
+    <section id="page-guide" class="page hidden fade-in">
+      <h2 class="text-3xl font-bold text-yellow-400 mb-6">Panduan Pemula</h2>
+      <div class="space-y-4 max-w-4xl mx-auto">
+
+        <details class="bg-gray-800 rounded-md p-4 shadow hover:shadow-yellow-400 transition cursor-pointer">
+          <summary class="font-semibold text-lg cursor-pointer">Cara Farming Gold</summary>
+          <p class="mt-2 text-gray-300">Farming gold secara efisien dengan mengoptimalkan waktu idle dan menggunakan hero dengan skill gold boost. Jangan lupa upgrade item yang meningkatkan gold drop.</p>
+        </details>
+
+        <details class="bg-gray-800 rounded-md p-4 shadow hover:shadow-yellow-400 transition cursor-pointer">
+          <summary class="font-semibold text-lg cursor-pointer">Leveling Cepat</summary>
+          <p class="mt-2 text-gray-300">Fokus pada quest utama dan gunakan item experience boost. Manfaatkan fitur auto-battle dan pastikan hero kamu selalu dalam kondisi terbaik.</p>
+        </details>
+
+        <details class="bg-gray-800 rounded-md p-4 shadow hover:shadow-yellow-400 transition cursor-pointer">
+          <summary class="font-semibold text-lg cursor-pointer">Build Awal</summary>
+          <p class="mt-2 text-gray-300">Mulailah dengan hero tank dan mage untuk keseimbangan serangan dan pertahanan. Prioritaskan item yang meningkatkan damage dan survivability.</p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- Heroes Page -->
+    <section id="page-heroes" class="page hidden fade-in">
+      <h2 class="text-3xl font-bold text-yellow-400 mb-6">Daftar Hero</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+
+        <!-- Hero Card Template -->
+        <div class="hero-card bg-gray-800 rounded-lg p-4 shadow hover:shadow-yellow-400 cursor-pointer transition" data-hero="1">
+          <img src="https://i.imgur.com/1Xq6Q0B.png" alt="Hero A" class="mx-auto w-24 h-24 object-contain mb-3" />
+          <h3 class="text-xl font-semibold text-yellow-400 text-center">Arden</h3>
+          <p class="text-center text-blue-400 italic">Tank</p>
+        </div>
+
+        <div class="hero-card bg-gray-800 rounded-lg p-4 shadow hover:shadow-yellow-400 cursor-pointer transition" data-hero="2">
+          <img src="https://i.imgur.com/7Q9Xq6B.png" alt="Hero B" class="mx-auto w-24 h-24 object-contain mb-3" />
+          <h3 class="text-xl font-semibold text-yellow-400 text-center">Luna</h3>
+          <p class="text-center text-blue-400 italic">Mage</p>
+        </div>
+
+        <div class="hero-card bg-gray-800 rounded-lg p-4 shadow hover:shadow-yellow-400 cursor-pointer transition" data-hero="3">
+          <img src="https://i.imgur.com/3Xq6Q0C.png" alt="Hero C" class="mx-auto w-24 h-24 object-contain mb-3" />
+          <h3 class="text-xl font-semibold text-yellow-400 text-center">Sylas</h3>
+          <p class="text-center text-blue-400 italic">Assassin</p>
+        </div>
+
+        <div class="hero-card bg-gray-800 rounded-lg p-4 shadow hover:shadow-yellow-400 cursor-pointer transition" data-hero="4">
+          <img src="https://i.imgur.com/5Xq6Q0D.png" alt="Hero D" class="mx-auto w-24 h-24 object-contain mb-3" />
+          <h3 class="text-xl font-semibold text-yellow-400 text-center">Mira</h3>
+          <p class="text-center text-blue-400 italic">Support</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Hero Modal -->
+    <div id="hero-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 hidden z-50">
+      <div class="bg-gray-900 rounded-lg max-w-lg w-full p-6 relative shadow-lg animate-fadeIn">
+        <button id="hero-modal-close" class="absolute top-3 right-3 text-yellow-400 hover:text-yellow-600 text-2xl font-bold">&times;</button>
+        <div id="hero-modal-content" class="text-gray-200">
+          <!-- Content will be injected by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Items Page -->
+    <section id="page-items" class="page hidden fade-in">
+      <h2 class="text-3xl font-bold text-yellow-400 mb-6">Daftar Item Penting</h2>
+      <div class="max-w-5xl mx-auto overflow-x-auto rounded-md shadow-lg">
+        <table class="min-w-full text-left text-gray-300">
+          <thead class="bg-blue-900 text-yellow-400">
+            <tr>
+              <th class="px-4 py-3">Nama Item</th>
+              <th class="px-4 py-3">Efek</th>
+              <th class="px-4 py-3">Kategori</th>
+              <th class="px-4 py-3">Rarity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-700 hover:bg-yellow-900/20 transition cursor-default">
+              <td class="px-4 py-3 font-semibold">Sword of Dawn</td>
+              <td class="px-4 py-3">+25% Damage</td>
+              <td class="px-4 py-3">Weapon</td>
+              <td class="px-4 py-3 text-yellow-400 font-bold">Epic</td>
+            </tr>
+            <tr class="border-b border-gray-700 hover:bg-yellow-900/20 transition cursor-default">
+              <td class="px-4 py-3 font-semibold">Dragon Shield</td>
+              <td class="px-4 py-3">+40% Defense</td>
+              <td class="px-4 py-3">Armor</td>
+              <td class="px-4 py-3 text-yellow-400 font-bold">Rare</td>
+            </tr>
+            <tr class="border-b border-gray-700 hover:bg-yellow-900/20 transition cursor-default">
+              <td class="px-4 py-3 font-semibold">Ring of Wisdom</td>
+              <td class="px-4 py-3">+15% Experience Gain</td>
+              <td class="px-4 py-3">Accessory</td>
+              <td class="px-4 py-3 text-yellow-400 font-bold">Legendary</td>
+            </tr>
+            <tr class="border-b border-gray-700 hover:bg-yellow-900/20 transition cursor-default">
+              <td class="px-4 py-3 font-semibold">Boots of Swiftness</td>
+              <td class="px-4 py-3">+20% Movement Speed</td>
+              <td class="px-4 py-3">Accessory</td>
+              <td class="px-4 py-3 text-yellow-400 font-bold">Uncommon</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Tips & Tricks Page -->
+    <section id="page-tips" class="page hidden fade-in">
+      <h2 class="text-3xl font-bold text-yellow-400 mb-6">Tips & Tricks</h2>
+      <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+        <div class="tip-card bg-gray-800 rounded-lg p-5 shadow hover:shadow-yellow-400 transition flex items-start space-x-4 cursor-default">
+          <svg class="w-8 h-8 text-yellow-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3"/></svg>
+          <div>
+            <h3 class="font-semibold text-lg text-yellow-400 mb-1">Top 5 Strategi untuk Idle Farming</h3>
+            <ul class="list-disc list-inside text-gray-300 text-sm">
+              <li>Manfaatkan waktu offline untuk farming otomatis.</li>
+              <li>Upgrade hero dengan skill gold boost terlebih dahulu.</li>
+              <li>Gunakan item experience boost saat leveling.</li>
+              <li>Fokus pada quest utama untuk reward maksimal.</li>
+              <li>Jangan lupa cek event dan bonus harian.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tip-card bg-gray-800 rounded-lg p-5 shadow hover:shadow-yellow-400 transition flex items-start space-x-4 cursor-default">
+          <svg class="w-8 h-8 text-yellow-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3"/></svg>
+          <div>
+            <h3 class="font-semibold text-lg text-yellow-400 mb-1">Tips Memilih Hero Awal</h3>
+            <p class="text-gray-300 text-sm">Pilih hero dengan role tank dan mage untuk keseimbangan serangan dan pertahanan. Prioritaskan hero dengan skill crowd control.</p>
+          </div>
+        </div>
+
+        <div class="tip-card bg-gray-800 rounded-lg p-5 shadow hover:shadow-yellow-400 transition flex items-start space-x-4 cursor-default">
+          <svg class="w-8 h-8 text-yellow-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3"/></svg>
+          <div>
+            <h3 class="font-semibold text-lg text-yellow-400 mb-1">Optimasi Item</h3>
+            <p class="text-gray-300 text-sm">Selalu upgrade item yang sesuai dengan role hero. Gunakan accessory yang meningkatkan gold dan experience gain.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-blue-900 via-gray-900 to-blue-900 text-gray-400 text-center p-6 mt-12 select-none">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      <div class="space-x-4">
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="hover:text-yellow-400 transition">Facebook</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter" class="hover:text-yellow-400 transition">Twitter</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-yellow-400 transition">Instagram</a>
+      </div>
+      <div>
+        &copy; 2024 Idle RPG Guide. All rights reserved.
+      </div>
+      <button id="btn-back-to-top" class="hover:text-yellow-400 transition">Kembali ke Atas ↑</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
