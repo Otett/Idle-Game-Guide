@@ -1,0 +1,19 @@
+/* Animasi fade-in */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Modal fadeIn */
+@keyframes modalFadeIn {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+.animate-fadeIn {
+  animation: modalFadeIn 0.3s ease forwards;
+}
